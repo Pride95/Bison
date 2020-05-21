@@ -20,6 +20,7 @@
 
 #include <config.h>
 #include "system.h"
+#include <stdio.h>
 
 #include <bitset.h>
 #include <bitset/stats.h>
@@ -55,11 +56,12 @@
 #include "symtab.h"
 #include "tables.h"
 #include "uniqstr.h"
-
+#include "ambiguity.h"
 
 int
 main (int argc, char *argv[])
 {
+ fprintf(stdout, "inizio ambiguita, fprintf \n");
 #define DEPENDS_ON_LIBINTL 1
   set_program_name (argv[0]);
   setlocale (LC_ALL, "");
@@ -146,6 +148,11 @@ main (int argc, char *argv[])
     }
   conflicts_print ();
   timevar_pop (tv_conflicts);
+  /* new part for ambiguity */
+  
+  setbuf(stdout, NULL);
+  printf("inizio parte innestata\n");
+  check_ambiguity();
 
   /* Compute the parser tables.  */
   timevar_push (tv_actions);

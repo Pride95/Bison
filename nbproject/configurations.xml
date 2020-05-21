@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="lib">
+        <df name="bitset">
+          <in>array.c</in>
+          <in>list.c</in>
+          <in>stats.c</in>
+          <in>table.c</in>
+          <in>vector.c</in>
+        </df>
+        <df name="glthread">
+          <in>lock.c</in>
+          <in>threadlib.c</in>
+          <in>tls.c</in>
+        </df>
+        <df name="uniwidth">
+          <in>width.c</in>
+        </df>
+        <in>allocator.c</in>
+        <in>areadlink.c</in>
+        <in>argmatch.c</in>
+        <in>asnprintf.c</in>
+        <in>asprintf.c</in>
+        <in>basename-lgpl.c</in>
+        <in>basename.c</in>
+        <in>binary-io.c</in>
+        <in>bitrotate.c</in>
+        <in>bitset.c</in>
+        <in>bitsetv.c</in>
+        <in>c-ctype.c</in>
+        <in>c-strcasecmp.c</in>
+        <in>c-strncasecmp.c</in>
+        <in>careadlinkat.c</in>
+        <in>cloexec.c</in>
+        <in>close-stream.c</in>
+        <in>closeout.c</in>
+        <in>concat-filename.c</in>
+        <in>dirname-lgpl.c</in>
+        <in>dirname.c</in>
+        <in>dup-safer-flag.c</in>
+        <in>dup-safer.c</in>
+        <in>exitfail.c</in>
+        <in>fatal-signal.c</in>
+        <in>fcntl.c</in>
+        <in>fd-safer-flag.c</in>
+        <in>fd-safer.c</in>
+        <in>fopen-safer.c</in>
+        <in>fprintf.c</in>
+        <in>fseterr.c</in>
+        <in>fstrcmp.c</in>
+        <in>get-errno.c</in>
+        <in>gethrxtime.c</in>
+        <in>getprogname.c</in>
+        <in>gettime.c</in>
+        <in>gl_array_list.c</in>
+        <in>gl_list.c</in>
+        <in>gl_xlist.c</in>
+        <in>hard-locale.c</in>
+        <in>hash.c</in>
+        <in>localcharset.c</in>
+        <in>main.c</in>
+        <in>math.c</in>
+        <in>mbchar.c</in>
+        <in>mbfile.c</in>
+        <in>mbrtowc.c</in>
+        <in>mbswidth.c</in>
+        <in>obstack.c</in>
+        <in>path-join.c</in>
+        <in>pipe-safer.c</in>
+        <in>pipe2-safer.c</in>
+        <in>pipe2.c</in>
+        <in>printf-args.c</in>
+        <in>printf-frexp.c</in>
+        <in>printf-frexpl.c</in>
+        <in>printf-parse.c</in>
+        <in>printf.c</in>
+        <in>progname.c</in>
+        <in>quotearg.c</in>
+        <in>readline.c</in>
+        <in>setlocale_null.c</in>
+        <in>sig-handler.c</in>
+        <in>snprintf.c</in>
+        <in>spawn-pipe.c</in>
+        <in>sprintf.c</in>
+        <in>stripslash.c</in>
+        <in>timespec.c</in>
+        <in>timevar.c</in>
+        <in>unistd.c</in>
+        <in>vasnprintf.c</in>
+        <in>vasprintf.c</in>
+        <in>vfprintf.c</in>
+        <in>vsnprintf.c</in>
+        <in>vsprintf.c</in>
+        <in>wait-process.c</in>
+        <in>wctype-h.c</in>
+        <in>xalloc-die.c</in>
+        <in>xconcat-filename.c</in>
+        <in>xhash.c</in>
+        <in>xmalloc.c</in>
+        <in>xmemdup0.c</in>
+        <in>xreadlink.c</in>
+        <in>xsize.c</in>
+        <in>xstrndup.c</in>
+        <in>xtime.c</in>
+        <in>yyerror.c</in>
+      </df>
+      <df name="src">
+        <in>AnnotationList.c</in>
+        <in>InadequacyList.c</in>
+        <in>Sbitset.c</in>
+        <in>ambiguity.c</in>
+        <in>assoc.c</in>
+        <in>closure.c</in>
+        <in>complain.c</in>
+        <in>conflicts.c</in>
+        <in>derives.c</in>
+        <in>files.c</in>
+        <in>fixits.c</in>
+        <in>getargs.c</in>
+        <in>gram.c</in>
+        <in>graphviz.c</in>
+        <in>ielr.c</in>
+        <in>lalr.c</in>
+        <in>location.c</in>
+        <in>lr0.c</in>
+        <in>main.c</in>
+        <in>muscle-tab.c</in>
+        <in>named-ref.c</in>
+        <in>nullable.c</in>
+        <in>output.c</in>
+        <in>parse-gram.c</in>
+        <in>print-graph.c</in>
+        <in>print-xml.c</in>
+        <in>print.c</in>
+        <in>reader.c</in>
+        <in>reduce.c</in>
+        <in>relation.c</in>
+        <in>scan-code-c.c</in>
+        <in>scan-gram-c.c</in>
+        <in>scan-skel-c.c</in>
+        <in>state.c</in>
+        <in>symlist.c</in>
+        <in>symtab.c</in>
+        <in>tables.c</in>
+        <in>uniqstr.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-g -O2"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>src/bison</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>.</pElem>
+              <pElem>lib</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>EXEEXT=""</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <folder path="0/lib/bitset">
+        <cTool>
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/lib/glthread">
+        <cTool>
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/lib/uniwidth">
+        <cTool>
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/src">
+        <cTool>
+          <preprocessorList>
+            <Elem>INSTALLDIR="/usr/local/bin"</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <item path="lib/allocator.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/areadlink.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/argmatch.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/asnprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/asprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/basename-lgpl.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/basename.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/binary-io.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/bitrotate.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/bitset.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/bitset/array.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bitset/list.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bitset/stats.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bitset/table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bitset/vector.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bitsetv.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/c-ctype.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/c-strcasecmp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/c-strncasecmp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/careadlinkat.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/cloexec.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/close-stream.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/closeout.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/concat-filename.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/dirname-lgpl.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/dirname.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/dup-safer-flag.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/dup-safer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/exitfail.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fatal-signal.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fcntl.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fd-safer-flag.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fd-safer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fopen-safer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fseterr.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/fstrcmp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/get-errno.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/gethrxtime.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/getprogname.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/gettime.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/gl_array_list.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/gl_list.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/gl_xlist.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/glthread/lock.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/glthread/threadlib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/glthread/tls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/hard-locale.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/hash.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/localcharset.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/math.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/mbchar.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/mbfile.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/mbrtowc.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/mbswidth.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/obstack.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/path-join.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/pipe-safer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/pipe2-safer.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/pipe2.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/printf-args.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/printf-frexp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/printf-frexpl.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/printf-parse.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/printf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/progname.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/quotearg.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/readline.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/setlocale_null.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/sig-handler.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/snprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/spawn-pipe.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/sprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/stripslash.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/timespec.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/timevar.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/unistd.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/uniwidth/width.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/vasnprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/vasprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/vfprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/vsnprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/vsprintf.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/wait-process.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/wctype-h.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xalloc-die.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xconcat-filename.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xhash.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xmalloc.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xmemdup0.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xreadlink.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xsize.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xstrndup.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/xtime.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+          <preprocessorList>
+            <Elem>DEFAULT_TEXT_DOMAIN="bison-gnulib"</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/yyerror.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/AnnotationList.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/InadequacyList.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/Sbitset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/ambiguity.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/assoc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/closure.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/complain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/conflicts.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/derives.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/files.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/fixits.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/getargs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/gram.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/graphviz.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/ielr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/lalr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/location.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/lr0.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/muscle-tab.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/named-ref.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/nullable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/output.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/parse-gram.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/print-graph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/print-xml.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/print.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/reader.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/reduce.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/relation.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/scan-code-c.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/scan-gram-c.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/scan-skel-c.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/state.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/symlist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/symtab.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/tables.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/uniqstr.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

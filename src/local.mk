@@ -32,6 +32,8 @@ src_bison_SOURCES =                             \
   src/InadequacyList.h                          \
   src/Sbitset.c                                 \
   src/Sbitset.h                                 \
+  src/ambiguity.c				\
+  src/ambiguity.h				\
   src/assoc.c                                   \
   src/assoc.h                                   \
   src/closure.c                                 \
