@@ -14,6 +14,34 @@
 
 reverse_transition **reverse_table;
 a_state *sr_automata;
+antagonist *antagonist1;
+antagonist *antagonist2;
+antagonist *intersection;
+
+enumerate_auto *conf_automa;
+
+int max_len = 12;
+
+int *word;
+int *pre_word;
+int len_word = 0;
+int len_pre_word = 0;
+int current_state = 0;
+int current_symbol = 0;
+
+bitset simboli_comflitto;
+
+bool lr1 = true;
+bool non_amb = true;
+
+int *stack_stati;
+int *stack_simboli;
+
+int pos_stati;
+int pos_simboli;
+
+int len_stati;
+int len_simboli;
 
 
 static void allocate_rever_table(void){
@@ -31,17 +59,30 @@ void static reverse_visit(rule *r, int *position, int start_state, int current_s
     tra->epsilon = true;
     tra->red = r->number;
     tra->sym = r->lhs->number;
+    
     int n_tr = states[current_state]->transitions->num;
     for(int i = 0; i < n_tr; i++){
       if(states[current_state]->transitions->states[i]->accessing_symbol == tra->sym){
         //ci siamo
         tra->number = states[current_state]->transitions->states[i]->number;
+        
         a_state *start = &sr_automata[start_state];
-        //start->transations
-        start->transations = realloc(start->transations, sizeof(a_transition*)*start->num_transation+1);
-        start->transations[start->num_transation] = tra;
-        start->num_transation++;
-        start->epsilon_trans = true;
+        bool present = false;
+        for(int j = 0; j < start->num_transation; j++){
+          a_transition *a_t = start->transations[j];
+          if(a_t->epsilon == tra->epsilon && a_t->number == tra->number && 
+                  a_t->red == tra->red && a_t->sym == tra->sym){
+            present = true;
+          }
+        }
+        
+        if(!present){
+          //start->transations
+          start->transations = realloc(start->transations, sizeof(a_transition*)*start->num_transation+1);
+          start->transations[start->num_transation] = tra;
+          start->num_transation++;
+          start->epsilon_trans = true;
+        }
       }
     }
     
@@ -128,20 +169,21 @@ static void build_sr_automata(void){
 }
 
 
-antagonist *antagonist1;
-antagonist *antagonist2;
-antagonist *intersection;
-
-enumerate_auto *conf_automa;
-
-
 void epsilon_closure(bitset b){
-  for(int i = 0; i < nstates; i++){
-    if(bitset_test(b, i) && sr_automata[i].epsilon_trans){
-      a_state *a_s = &sr_automata[i];
-      for(int j = 0; j< a_s->num_transation; j++){
-        if(a_s->transations[j]->epsilon){
-          bitset_set(b, a_s->transations[j]->number);
+  bool rifare = true;
+  
+  while(rifare){
+    rifare = false;
+    for(int i = 0; i < nstates; i++){
+      if(bitset_test(b, i) && sr_automata[i].epsilon_trans){
+        a_state *a_s = &sr_automata[i];
+        for(int j = 0; j< a_s->num_transation; j++){
+          if(a_s->transations[j]->epsilon){
+            if(!bitset_test(b, a_s->transations[j]->number)){
+              bitset_set(b, a_s->transations[j]->number);
+              rifare = true;
+            }
+          }
         }
       }
     }
@@ -239,7 +281,14 @@ void subset_costruction(antagonist *a, int s){
     if(bitset_empty_p(new_bit)){
       continue;
     }
+    //fprintf(stderr, " bitset prima closure - \n ");
+    //print_bitset_state(new_bit);
+    //fprintf(stderr, " -------------- \n ");
+    //fprintf(stderr, " bitset DOPO closure - \n ");
     epsilon_closure(new_bit);
+    //print_bitset_state(new_bit);
+    //fprintf(stderr, " -------------- \n ");
+    
     
     // ho finito le transizioni
     // cerco un altro stato uguale
@@ -249,15 +298,16 @@ void subset_costruction(antagonist *a, int s){
     if(exist == -1){
       //fprintf(stderr, " new state - \n ");
       //print_bitset_state(new_bit);
-     // fprintf(stderr, " -------------- \n ");
+      //fprintf(stderr, " -------------- \n ");
       // devo creare lo stato
       sc_state *new_state = xcalloc(1, sizeof(sc_state));
       new_state->state_set = bitset_create(nstates, BITSET_FIXED);
       new_state->final = final;
       //new_state->state_set
-      bitset_copy(new_state->state_set, new_bit);
+      //bitset_copy(new_state->state_set, new_bit);
+      bitset_or(new_state->state_set, new_bit, new_state->state_set);
       //a->stati 
-      a->stati = realloc(a->stati, sizeof(sc_state*)*a->num_state+1);
+      a->stati = realloc(a->stati, sizeof(sc_state*)*(a->num_state+1));
       a->stati[a->num_state] = new_state;
       a->num_state++;
       exist = a->num_state-1;
@@ -283,13 +333,15 @@ void subset_costruction(antagonist *a, int s){
       //non è possibile
     }
   }
-  // fprintf(stderr, "numero di stati %d - \n ", a->num_state);
-/*
-  if(s <= a->num_state - 1){
-    fprintf(stderr, " s alla fine ciclo %d - \n ", s);
-    subset_costruction(a, s+1);
+}
+
+
+void print_auto(antagonist* a){
+  printf("------\n");
+  for(int i = 0; i < a->num_state; i++){
+    print_bitset_state(a->stati[i]->state_set);
   }
-*/
+  printf("--------\n");
 }
 
 
@@ -306,6 +358,7 @@ void complete_antagonist(antagonist* a){
       printf("elaborati %d stati\n", i);
     }
     i++;
+    //print_auto(a);
   }
 }
 
@@ -411,28 +464,6 @@ bool check_intersection_empty(void){
   }
   return true;
 }
-
-
-int max_len = 25;
-
-int *word;
-int *pre_word;
-int len_word = 0;
-int len_pre_word = 0;
-int current_state = 0;
-int current_symbol = 0;
-
-bitset simboli_comflitto;
-
-
-int *stack_stati;
-int *stack_simboli;
-
-int pos_stati;
-int pos_simboli;
-
-int len_stati;
-int len_simboli;
 
 
 void check_stacks(void){
@@ -855,10 +886,53 @@ int create_pre_word(int p){
 }
 
 
+int next_symbol(int p){
+  if(len_word > max_len){
+    return -1;
+  }
+  sc_state *s = intersection->stati[p];
+  if(s->final){
+    // sono allo stato finale e di solito non ho transizioni quindi posso termianare
+    fprintf(stderr, "Parola da testare: ");
+    for(int i = 0; i < len_word; i++){
+      fprintf(stderr, "%s - ", symbols[word[i]]->tag);
+    }
+    fprintf(stderr, "\n");
+    //int result = config_atutoma(0, 0);
+    int result = create_pre_word(0);
+    return result;
+  }
+  
+  if(len_word == 0){
+    word = calloc(1, sizeof(int));
+  }
+  len_word++;
+  word = realloc(word, sizeof(int)*len_word);
+  
+  for(int i = 0; i < s->num_transation; i++){
+    word[len_word-1] = s->transations[i]->sym;
+    int success = next_symbol(s->transations[i]->number);
+    if(success > 0){
+      // len_word--;
+      return success;
+    }
+  }
+  len_word--;
+  return -1;
+}
+
+
+int find_word(void){
+  int success = next_symbol(0);
+  return success;
+}
+
+
 int config_atutoma(int s, int sym){
   int result = -1;
   if(!(s < nstates)){
-    result = create_pre_word(0);
+    //result = create_pre_word(0);
+    result = find_word();
     return result;
   }
   if(!sr_automata[s].conflict){
@@ -901,45 +975,7 @@ int config_atutoma(int s, int sym){
 }
 
 
-int next_symbol(int p){
-  if(len_word > max_len){
-    return -1;
-  }
-  sc_state *s = intersection->stati[p];
-  if(s->final){
-    // sono allo stato finale e di solito non ho transizioni quindi posso termianare
-    fprintf(stderr, "Parola da testare: ");
-    for(int i = 0; i < len_word; i++){
-      fprintf(stderr, "%s - ", symbols[word[i]]->tag);
-    }
-    fprintf(stderr, "\n");
-    int result = config_atutoma(0, 0);
-    return result;
-  }
-  
-  if(len_word == 0){
-    word = calloc(1, sizeof(int));
-  }
-  len_word++;
-  word = realloc(word, sizeof(int)*len_word);
-  
-  for(int i = 0; i < s->num_transation; i++){
-    word[len_word-1] = s->transations[i]->sym;
-    int success = next_symbol(s->transations[i]->number);
-    if(success > 0){
-      // len_word--;
-      return success;
-    }
-  }
-  len_word--;
-  return -1;
-}
 
-
-int find_word(void){
-  int success = next_symbol(0);
-  return success;
-}
 
 
 void print_ambiguity(void){
@@ -1229,7 +1265,13 @@ int ambiguity_state (int stato){
           build_intersection();
           int result = 0;
           if(!check_intersection_empty()){
-            result = find_word(); 
+            //result = find_word(); 
+            non_amb = false;
+            fprintf(stderr,"Intersezione NON vuota");   
+            result = config_atutoma(0, 0);
+          }
+          else{
+           fprintf(stderr,"Intersezione vuota");
           }
 
           if(result == 1){
@@ -1299,8 +1341,9 @@ int ambiguity_state (int stato){
         build_intersection();
         int result = 0;
         if(!check_intersection_empty()){
+          non_amb = false;
           printf("inizio generazione parole\n");
-          result = find_word(); 
+          result = config_atutoma(0, 0);
         }
         
         if(result == 1){
@@ -1323,6 +1366,7 @@ int ambiguity(void){
   int result = 0;
   for(int i = 0; i< nstates; i++){
     if(sr_automata[i].conflict){
+      lr1 = false;
       fprintf (stderr, "conflitto nello stato %d %d\n", i, sr_automata[i].conflict);
       result = ambiguity_state(i);
       if(result == 1){
@@ -1360,4 +1404,11 @@ void check_ambiguity(void){
   set_ambiguity();
   allocate_enumeration_automata();
   ambiguity();
+  
+  if(lr1){
+    printf("\nLa grammatica e LR1 \n");
+  }
+  if(non_amb){
+    printf("\nLa grammatica non ha intersezioni non vuote \n");
+  }
 }

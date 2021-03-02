@@ -4382,11 +4382,11 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/arE.y -o y.tab.o</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/CR.y -o y.tab.o</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/AA.y -o y.tab.o</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/gram.y -o y.tab.o</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/AA.y -o y.tab.o</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/gram.y -o y.tab.o</runcommand>
         <rundir>.</rundir>
         <buildfirst>false</buildfirst>
-        <console-type>1</console-type>
         <terminal-type>1</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>
