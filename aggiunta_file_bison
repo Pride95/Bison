@@ -1,0 +1,12 @@
+nel file local.mk nella cartella src aggiungere i nuovi file nell'elenco
+poi nella cartella lanciare i seguenti commandi:
+
+- aclocal
+- autoconf
+- automake --add-missing --foreign
+- ./configure
+- make
+
+cosi viene compilato e siamo apposto
+lo si trova nella cartella: 
+
