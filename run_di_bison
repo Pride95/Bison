@@ -1,0 +1,1 @@
+"${OUTPUT_PATH}" -d /home/tesi/Scrivania/bis/ar.y -o y.tab.o -Tautomaton,all
